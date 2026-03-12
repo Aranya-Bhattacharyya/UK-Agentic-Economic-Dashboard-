@@ -53,13 +53,8 @@ streamlit run app.py
 ```
 ## 🌐 Deployment
 This app is optimized for Streamlit Community Cloud.
-# Python Version: 3.12 (Recommended for library stability)
-# Secrets: Add your GOOGLE_API_KEY in the Streamlit Advanced Settings using the TOML format.
-
-## 📝 Future Roadmap
-# Add Conversation Memory to allow for follow-up economic analysis.
-# Integrate a News Search Tool to correlate GDP shifts with global events.
-# Support for additional ONS datasets (Inflation, Employment, etc.).
+ ### 1. Python Version: 3.12 (Recommended for library stability)
+ ### 2. Secrets: Add your GOOGLE_API_KEY in the Streamlit Advanced Settings using the TOML format.
 
 ## 👤 Author
 Aranya Bhattacharyya MSc Data Science and Communication Candidate | University of Liverpool | www.linkedin.com/in/aranya-bhattacharyya
