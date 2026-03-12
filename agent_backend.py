@@ -2,10 +2,25 @@ import os
 import requests
 import pandas as pd
 import plotly.express as px
+from dotenv import load_dotenv # New Import
 from langchain_core.tools import tool
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_classic.agents import create_tool_calling_agent, AgentExecutor
 from langchain_core.prompts import ChatPromptTemplate
+
+# 1. Load the secret variables from your local .env file
+load_dotenv()
+
+# 2. Access the key safely from the environment
+# No more hardcoded "AIza..." strings here!
+api_key = os.getenv("GOOGLE_API_KEY")
+
+# 3. Pass the key to the LLM
+llm = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash", 
+    temperature=0, 
+    google_api_key=api_key
+)
 
 @tool
 def fetch_ons_gdp_data(start_year: int, end_year: int) -> str:
